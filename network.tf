@@ -1,5 +1,5 @@
 resource "aws_subnet" "public_subnets" {
-  #create 3 public subnets in 3 AZs at once
+  #It calculates the AZs you set before and create one subnet for each of them.
   count             = length(var.public_azs)
   vpc_id            = var.vpc_id
   availability_zone = var.public_azs[count.index]

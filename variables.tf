@@ -1,4 +1,4 @@
-#create public subnets in 3 AZs
+#Defining the AZs that I want to create the subnets (private-subnets)
 variable "public_azs" {
   type = list(string)
   default = ["us-east-1d", "us-east-1e", "us-east-1f"]
